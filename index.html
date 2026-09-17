@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>세종한국어 1A - 1~4과 학습 & 평가</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com">
+function grade13(){const a=['의사','선생님','팔','십오','위','안','이에요','아니에요','삼','누구'];let n=0;a.forEach((v,i)=>{const e=document.getElementById('u13_'+(i+1));if(e&&e.value.trim().replace(/\s/g,'')===v.replace(/\s/g,''))n++;});const r=document.getElementById('u13result');r.classList.remove('hidden');r.textContent='1~3과 점수: '+n+' / 10';}
+function grade4(){const a=['공부해요','먹어요','봐요','들어요','을','를','를','들어요','봐요','공부해요'];let n=0;a.forEach((v,i)=>{const e=document.getElementById('u4_'+(i+1));if(e&&e.value.trim().replace(/\s/g,'')===v.replace(/\s/g,''))n++;});const r=document.getElementById('u4result');r.classList.remove('hidden');r.textContent='4과 점수: '+n+' / 10';}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 body{font-family:'Noto Sans KR',sans-serif}
@@ -22,10 +25,14 @@ body{font-family:'Noto Sans KR',sans-serif}
 <button onclick="showLesson('lesson1')" class="tab tab-active px-4 py-2 rounded-xl font-medium">1과</button>
 <button onclick="showLesson('lesson2')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">2과</button>
 <button onclick="showLesson('lesson3')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">3과</button>
-<button onclick="showLesson('lesson4')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">4과</button>
-<button onclick="showLesson('exam14')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">1~4과 시험</button>
-<button onclick="showLesson('lesson5')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">5과</button>
-<button onclick="showLesson('lesson6')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">6과</button>
+<button onclick="showLesson('practice13')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">1~3과 연습</button>
+<button onclick="showLesson('test13')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">1~3과 시험</button>
+<button onclick="showLesson('lesson4')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">4과 연습</button>
+<button onclick="showLesson('test4')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">4과 시험</button>
+<button onclick="showLesson('practice5')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">5과 연습</button>
+<button onclick="showLesson('test5')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">5과 시험</button>
+<button onclick="showLesson('practice6')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">6과 연습</button>
+<button onclick="showLesson('test6')" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">6과 시험</button>
 <button onclick="window.print()" class="px-4 py-2 rounded-xl font-medium bg-slate-800 text-white">인쇄/PDF</button>
 </div>
 </header>
@@ -49,7 +56,7 @@ body{font-family:'Noto Sans KR',sans-serif}
 <h2 class="text-xl font-bold mb-1">2과. 전화번호가 뭐예요?</h2><p class="text-emerald-600 mb-5">주제: 숫자 및 연락처</p>
 <div class="grid gap-3 md:grid-cols-2">
 <div class="border rounded-xl p-4"><b>전화번호</b> · [전화번호] · Phone number<br><span class="text-sm">전화번호가 뭐예요?</span></div>
-<div class="border rounded-xl p-4"><b>몇</b> · [몇] · How many / What (number)<br><span class="text-sm">몇 층이에요? / 몇 번이에요?</span></div>
+<div class="border rounded-xl p-4"><b>몇</b> · [먗] · How many / What (number)<br><span class="text-sm">몇 층이에요? / 몇 번이에요?</span></div>
 <div class="border rounded-xl p-4"><b>층</b> · [층] · Floor<br><span class="text-sm">영화관이 7층에 있어요.</span></div>
 <div class="border rounded-xl p-4"><b>얼마</b> · [얼마] · How much<br><span class="text-sm">우유가 얼마예요?</span></div>
 <div class="border rounded-xl p-4"><b>카페</b> · [카페] · Cafe<br><span class="text-sm">카페가 4층이에요.</span></div>
@@ -122,8 +129,30 @@ body{font-family:'Noto Sans KR',sans-serif}
 </div>
 </section>
 
-<section id="exam14" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
-<h2 class="text-xl font-bold">Part 2. 1~4과 단원별 어휘 및 표현 시험</h2><p class="text-slate-500 mb-5">제한시간: 20분 · 10문항 · 100점</p>
+<section id="test13" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
+<h2 class="text-xl font-bold">1~3과 통합 시험</h2><p class="text-slate-500 mb-5">10문항 · 어휘, 숫자, 위치, 기본 표현</p>
+<div class="space-y-4">
+<label class="block">1. 병원에서 환자를 치료해요. <select id="u13_1" class="border rounded p-2"><option></option><option>선생님</option><option value="의사">의사</option><option>회사원</option></select></label>
+<label class="block">2. 학교에서 학생을 가르쳐요. <select id="u13_2" class="border rounded p-2"><option></option><option value="선생님">선생님</option><option>의사</option><option>요리사</option></select></label>
+<label class="block">3. 8층 → <input id="u13_3" class="border rounded p-2 w-24"> 층</label>
+<label class="block">4. 15번 → <input id="u13_4" class="border rounded p-2 w-24"> 번</label>
+<label class="block">5. 컴퓨터가 책상 <select id="u13_5" class="border rounded p-2"><option></option><option value="위">위</option><option>안</option><option>옆</option></select>에 있어요.</label>
+<label class="block">6. 펜이 필통 <select id="u13_6" class="border rounded p-2"><option></option><option>위</option><option value="안">안</option><option>옆</option></select>에 있어요.</label>
+<label class="block">7. 저는 학생 <select id="u13_7" class="border rounded p-2"><option></option><option value="이에요">이에요</option><option>아니에요</option></select></label>
+<label class="block">8. 동생이에요? → 아니요, 동생이 <select id="u13_8" class="border rounded p-2"><option></option><option>이에요</option><option value="아니에요">아니에요</option></select></label>
+<label class="block">9. 203호 → 이백 <input id="u13_9" class="border rounded p-2 w-24"> 호</label>
+<label class="block">10. 이 사람은 ___예요? <input id="u13_10" class="border rounded p-2"></label>
+</div><button onclick="grade13()" class="mt-6 w-full bg-indigo-600 text-white font-bold py-3 rounded-xl">1~3과 채점</button><div id="u13result" class="mt-4 hidden rounded-xl bg-indigo-50 p-4"></div>
+</section>
+<section id="test4" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
+<h2 class="text-xl font-bold">4과 단원 시험</h2><p class="text-slate-500 mb-5">10문항 · 현재형과 을/를</p>
+<div class="space-y-4">
+<label class="block">1. 공부하다 → <input id="u4_1" class="border rounded p-2"></label><label class="block">2. 먹다 → <input id="u4_2" class="border rounded p-2"></label><label class="block">3. 보다 → <input id="u4_3" class="border rounded p-2"></label><label class="block">4. 듣다 → <input id="u4_4" class="border rounded p-2"></label>
+<label class="block">5. 밥___ 먹어요. <select id="u4_5" class="border rounded p-2"><option></option><option value="을">을</option><option>를</option></select></label><label class="block">6. 피자___ 먹어요. <select id="u4_6" class="border rounded p-2"><option></option><option>을</option><option value="를">를</option></select></label><label class="block">7. 친구___ 만나요. <select id="u4_7" class="border rounded p-2"><option></option><option value="를">를</option><option>을</option></select></label><label class="block">8. 음악을 ___. <input id="u4_8" class="border rounded p-2"></label><label class="block">9. 영화를 ___. <input id="u4_9" class="border rounded p-2"></label><label class="block">10. 한국어를 ___. <input id="u4_10" class="border rounded p-2"></label>
+</div><button onclick="grade4()" class="mt-6 w-full bg-indigo-600 text-white font-bold py-3 rounded-xl">4과 채점</button><div id="u4result" class="mt-4 hidden rounded-xl bg-indigo-50 p-4"></div>
+</section>
+<section id="practice13" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
+<h2 class="text-xl font-bold">1~3과 복습 연습 및 통합 확인</h2><p class="text-slate-500 mb-5">제한시간: 20분 · 10문항 · 100점</p>
 <label class="block mb-5">이름 <input id="studentName" class="border rounded-lg p-2 ml-2" placeholder="이름"></label>
 <div class="space-y-6">
 <div><b>1.</b> 병원에서 환자를 치료해요. <select id="q1" class="border rounded-lg p-2"><option value="">선택</option><option>요리사</option><option value="의사">의사</option><option>회사원</option><option>선생님</option></select></div>
@@ -142,7 +171,7 @@ body{font-family:'Noto Sans KR',sans-serif}
 </section>
 
 
-<section id="lesson5" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
+<section id="practice5" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
 <h2 class="text-xl font-bold mb-1">5과. 어디에 가요?</h2><p class="text-amber-600 mb-5">주제: 장소·이동·음식 · 문법: 에, 하고</p>
 <h3 class="font-bold text-lg mb-3">A. 어휘 학습</h3><div class="grid gap-3 md:grid-cols-2">
 <div class="border rounded-xl p-4"><b>학교 / 회사 / 식당 / 카페</b><br><span class="text-sm">학교에 가요. · 회사에 가요. · 식당에 가요.</span></div>
@@ -152,7 +181,8 @@ body{font-family:'Noto Sans KR',sans-serif}
 <div class="border rounded-xl p-4"><b>신발 / 구두 / 화장품</b><br><span class="text-sm">백화점에서 신발을 사요.</span></div></div>
 <h3 class="font-bold text-lg mt-6 mb-3">B. 문법 핵심</h3><div class="border rounded-xl p-4 space-y-2"><p><b>1) 장소 + 에 가요</b> : 이동하는 장소를 말해요.</p><p>학교<strong>에</strong> 가요. / 카페<strong>에</strong> 가요.</p><p><b>2) 명사 + 하고</b> : 두 가지 이상을 연결해요.</p><p>빵<strong>하고</strong> 우유를 사요. / 커피<strong>하고</strong> 차를 마셔요.</p></div>
 <h3 class="font-bold text-lg mt-6 mb-3">C. 강화 연습</h3><div class="space-y-3"><label class="block">1. 저는 학교<input id="p5_1" class="border rounded-lg p-2 w-20 mx-1"> 가요.</label><label class="block">2. 마리 씨는 카페<input id="p5_2" class="border rounded-lg p-2 w-20 mx-1"> 가요.</label><label class="block">3. 빵<input id="p5_3" class="border rounded-lg p-2 w-20 mx-1"> 우유를 사요.</label><label class="block">4. 라면<input id="p5_4" class="border rounded-lg p-2 w-20 mx-1"> 김밥을 먹어요.</label><label class="block">5. 문장 만들기: 공원 / 가요 → <input id="p5_5" class="border rounded-lg p-2 w-48"></label></div><button onclick="checkP5()" class="mt-4 bg-amber-600 text-white font-bold py-2 px-4 rounded-xl">연습 확인</button><div id="p5result" class="mt-3 hidden rounded-xl bg-amber-50 p-4"></div>
-<h3 class="font-bold text-lg mt-8 mb-3">D. 5과 단원 평가 (10문항)</h3><div class="space-y-4">
+</section>
+<section id="test5" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7"><h2 class="text-xl font-bold">5과 단원 시험 (10문항)</h2><p class="text-slate-500 mb-5">문법: 에, 하고 · 어휘: 장소와 음식</p><div class="space-y-4">
 <label class="block">1. 저는 학교___ 가요. <select id="t5_1" class="border rounded p-2"><option></option><option>에</option><option>하고</option></select></label>
 <label class="block">2. 카페___ 가요. <select id="t5_2" class="border rounded p-2"><option></option><option>하고</option><option>에</option></select></label>
 <label class="block">3. 빵___ 우유를 사요. <select id="t5_3" class="border rounded p-2"><option></option><option>에</option><option>하고</option></select></label>
@@ -162,14 +192,13 @@ body{font-family:'Noto Sans KR',sans-serif}
 <label class="block">7. 저는 ___에 가요. (마트) <input id="t5_7" class="border rounded p-2"></label>
 <label class="block">8. 사과하고 포도를 ___. <input id="t5_8" class="border rounded p-2"></label>
 <label class="block">9. 어디에 가요? (백화점) <input id="t5_9" class="border rounded p-2"></label>
-<label class="block">10. 무엇을 먹어요? (케이크하고 아이스크림) <input id="t5_10" class="border rounded p-2"></label></div><button onclick="grade5()" class="mt-5 w-full bg-indigo-600 text-white font-bold py-3 rounded-xl">5과 채점</button><div id="t5result" class="mt-4 hidden rounded-xl bg-indigo-50 p-4"></div>
-</section>
-<section id="lesson6" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
+<label class="block">10. 무엇을 먹어요? (케이크하고 아이스크림) <input id="t5_10" class="border rounded p-2"></label></div><button onclick="grade5()" class="mt-5 w-full bg-indigo-600 text-white font-bold py-3 rounded-xl">5과 채점</button><div id="t5result" class="mt-4 hidden rounded-xl bg-indigo-50 p-4"></div></section>
+<section id="practice6" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
 <h2 class="text-xl font-bold mb-1">6과. 몇 개예요?</h2><p class="text-amber-600 mb-5">주제: 고유어 수사·단위 명사·요청 표현 · 문법: -(으)세요</p>
 <h3 class="font-bold text-lg mb-3">A. 어휘·표현 학습</h3><div class="grid gap-3 md:grid-cols-2"><div class="border rounded-xl p-4"><b>하나, 둘, 셋, 넷, 다섯, 여섯, 일곱, 여덟, 아홉, 열</b><br><span class="text-sm">한 개, 두 명, 세 마리, 네 잔처럼 단위 명사 앞에서 형태가 바뀌어요.</span></div><div class="border rounded-xl p-4"><b>개 / 명 / 마리 / 잔 / 병 / 권 / 장 / 살</b><br><span class="text-sm">사물, 사람, 동물, 음료, 병, 책, 종이, 나이에 사용해요.</span></div><div class="border rounded-xl p-4"><b>어서 오세요. / 모두 얼마예요?</b><br><span class="text-sm">가게에서 손님을 맞이하거나 가격을 물을 때 사용해요.</span></div><div class="border rounded-xl p-4"><b>앉으세요. / 쓰세요. / 펴세요. / 오세요. / 타세요.</b><br><span class="text-sm">-(으)세요: 상대방에게 정중하게 요청하거나 지시해요.</span></div></div>
 <h3 class="font-bold text-lg mt-6 mb-3">B. 강화 연습</h3><div class="space-y-3"><label class="block">1. 1 → <input id="p6_1" class="border rounded p-2"></label><label class="block">2. 4 → <input id="p6_2" class="border rounded p-2"></label><label class="block">3. 학생 세 ___ <input id="p6_3" class="border rounded p-2"></label><label class="block">4. 고양이 네 ___ <input id="p6_4" class="border rounded p-2"></label><label class="block">5. 커피 한 ___ 주세요. <input id="p6_5" class="border rounded p-2"></label><label class="block">6. 앉다 → <input id="p6_6" class="border rounded p-2"></label><label class="block">7. 오다 → <input id="p6_7" class="border rounded p-2"></label></div><button onclick="checkP6()" class="mt-4 bg-amber-600 text-white font-bold py-2 px-4 rounded-xl">연습 확인</button><div id="p6result" class="mt-3 hidden rounded-xl bg-amber-50 p-4"></div>
-<h3 class="font-bold text-lg mt-8 mb-3">C. 6과 단원 평가 (10문항)</h3><div class="space-y-4"><label class="block">1. 1의 고유어 수는? <select id="t6_1" class="border rounded p-2"><option></option><option value="하나">하나</option><option>둘</option><option>셋</option></select></label><label class="block">2. 4의 고유어 수는? <select id="t6_2" class="border rounded p-2"><option></option><option>셋</option><option value="넷">넷</option><option>다섯</option></select></label><label class="block">3. 사람 수 단위는? <select id="t6_3" class="border rounded p-2"><option></option><option value="명">명</option><option>마리</option><option>잔</option></select></label><label class="block">4. 동물 수 단위는? <select id="t6_4" class="border rounded p-2"><option></option><option>권</option><option value="마리">마리</option><option>장</option></select></label><label class="block">5. 커피 한 ___ 주세요. <input id="t6_5" class="border rounded p-2"></label><label class="block">6. 책 두 ___ 있어요. <input id="t6_6" class="border rounded p-2"></label><label class="block">7. 앉다 → <input id="t6_7" class="border rounded p-2"></label><label class="block">8. 오다 → <input id="t6_8" class="border rounded p-2"></label><label class="block">9. 라면 ___ 개 주세요. (3) <input id="t6_9" class="border rounded p-2"></label><label class="block">10. 모두 얼마예요? <input id="t6_10" class="border rounded p-2" placeholder="예: 삼천 원이에요."></label></div><button onclick="grade6()" class="mt-5 w-full bg-indigo-600 text-white font-bold py-3 rounded-xl">6과 채점</button><div id="t6result" class="mt-4 hidden rounded-xl bg-indigo-50 p-4"></div>
 </section>
+<section id="test6" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7"><h2 class="text-xl font-bold">6과 단원 시험 (10문항)</h2><p class="text-slate-500 mb-5">고유어 수사·단위 명사·-(으)세요</p><div class="space-y-4"><label class="block">1. 1의 고유어 수는? <select id="t6_1" class="border rounded p-2"><option></option><option value="하나">하나</option><option>둘</option><option>셋</option></select></label><label class="block">2. 4의 고유어 수는? <select id="t6_2" class="border rounded p-2"><option></option><option>셋</option><option value="넷">넷</option><option>다섯</option></select></label><label class="block">3. 사람 수 단위는? <select id="t6_3" class="border rounded p-2"><option></option><option value="명">명</option><option>마리</option><option>잔</option></select></label><label class="block">4. 동물 수 단위는? <select id="t6_4" class="border rounded p-2"><option></option><option>권</option><option value="마리">마리</option><option>장</option></select></label><label class="block">5. 커피 한 ___ 주세요. <input id="t6_5" class="border rounded p-2"></label><label class="block">6. 책 두 ___ 있어요. <input id="t6_6" class="border rounded p-2"></label><label class="block">7. 앉다 → <input id="t6_7" class="border rounded p-2"></label><label class="block">8. 오다 → <input id="t6_8" class="border rounded p-2"></label><label class="block">9. 라면 ___ 개 주세요. (3) <input id="t6_9" class="border rounded p-2"></label><label class="block">10. 모두 얼마예요? <input id="t6_10" class="border rounded p-2" placeholder="예: 삼천 원이에요."></label></div><button onclick="grade6()" class="mt-5 w-full bg-indigo-600 text-white font-bold py-3 rounded-xl">6과 채점</button><div id="t6result" class="mt-4 hidden rounded-xl bg-indigo-50 p-4"></div></section>
 <footer class="text-center text-sm text-slate-500 py-6">Bukhara King Sejong Institute · 세종한국어 1A · 1~6과</footer>
 </div>
 <script>
@@ -179,6 +208,9 @@ function checkP5(){const a=['에','에','하고','하고','공원에 가요.'];l
 function grade5(){const a=['에','에','하고','하고','커피','신발','저는 마트에 가요.','먹어요.','백화점에 가요.','케이크하고 아이스크림을 먹어요.'];let n=0;a.forEach((v,i)=>{if(document.getElementById('t5_'+(i+1)).value.trim().replace(/\s/g,'')===v.replace(/\s/g,''))n++;});const r=document.getElementById('t5result');r.classList.remove('hidden');r.textContent='5과 점수: '+n+' / 10';}
 function checkP6(){const a=['하나','넷','명','마리','잔','앉으세요.','오세요.'];let n=0;a.forEach((v,i)=>{if(document.getElementById('p6_'+(i+1)).value.trim().replace(/\s/g,'')===v.replace(/\s/g,''))n++;});const r=document.getElementById('p6result');r.classList.remove('hidden');r.textContent='연습 결과: '+n+' / 7';}
 function grade6(){const a=['하나','넷','명','마리','잔','권','앉으세요.','오세요.','세'];let n=0;a.forEach((v,i)=>{if(document.getElementById('t6_'+(i+1)).value.trim().replace(/\s/g,'')===v.replace(/\s/g,''))n++;});if(document.getElementById('t6_10').value.trim())n++;const r=document.getElementById('t6result');r.classList.remove('hidden');r.textContent='6과 점수: '+n+' / 10 (10번은 자유 응답)';}
+
+function grade13(){const a=['의사','선생님','팔','십오','위','안','이에요','아니에요','삼','누구'];let n=0;a.forEach((v,i)=>{const e=document.getElementById('u13_'+(i+1));if(e&&e.value.trim().replace(/\s/g,'')===v.replace(/\s/g,''))n++;});const r=document.getElementById('u13result');r.classList.remove('hidden');r.textContent='1~3과 점수: '+n+' / 10';}
+function grade4(){const a=['공부해요','먹어요','봐요','들어요','을','를','를','들어요','봐요','공부해요'];let n=0;a.forEach((v,i)=>{const e=document.getElementById('u4_'+(i+1));if(e&&e.value.trim().replace(/\s/g,'')===v.replace(/\s/g,''))n++;});const r=document.getElementById('u4result');r.classList.remove('hidden');r.textContent='4과 점수: '+n+' / 10';}
 </script>
 </body>
 </html>
