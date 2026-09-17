@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>세종한국어 1A - 1~4과 학습·연습·개별 평가</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>?몄쥌?쒓뎅??1A - 1~6怨??숈뒿쨌?곗뒿쨌媛쒕퀎 ?됯? ?듯빀</title>
+<script src="https://cdn.tailwindcss.com">
+function checkP5W(){const a=['怨듭썝','留덊듃','怨쇱옄','?앸떦','而ㅽ뵾','??,'?섍퀬','??,'?섍퀬','?대뵒??媛??'];let s=0;a.forEach((v,i)=>{if(document.getElementById('p5w'+(i+1)).value===v)s++;});const r=document.getElementById('p5wResult');r.classList.remove('hidden');r.innerHTML='<b>5怨?媛앷????곗뒿: '+s+' / 10</b><p>?곌린 臾명빆 11~15踰덉? ?좎깮?섏씠 ?뺤씤??二쇱꽭??</p>';}
+function grade5new(){const a=['怨듭썝','??,'?섍퀬','怨쇱옄','??,'?섍퀬','移댄럹','??,'臾댁뾿??癒뱀뼱??','?ш낵?섍퀬 ?щ룄瑜?癒뱀뼱??'];let s=0;a.forEach((v,i)=>{if(document.getElementById('t5_'+(i+1)).value===v)s++;});const r=document.getElementById('t5Result');r.classList.remove('hidden');r.innerHTML='<b>5怨??먯닔: '+(s*10)+'??/ 100??/b><br>留욏엺 臾명빆: '+s+' / 10';}
+function checkP6W(){const a=['?섎굹','??,'?ъ꽢','??,'?ㅻТ','媛?,'紐?,'留덈━','??,'沅?,'?됱쑝?몄슂.','?ㅼ꽭??','??몄슂.','?곗꽭??','?댁꽭??'];let s=0;a.forEach((v,i)=>{if(document.getElementById('p6w'+(i+1)).value===v)s++;});const r=document.getElementById('p6wResult');r.classList.remove('hidden');r.innerHTML='<b>6怨??곗뒿 寃곌낵: '+s+' / 15</b>'}
+function grade6new(){const a=['?섎굹','?쇨낢','紐?,'留덈━','??,'沅?,'?됱쑝?몄슂.','?ㅼ꽭??','??,'??몄슂.'];let s=0;a.forEach((v,i)=>{if(document.getElementById('t6_'+(i+1)).value===v)s++;});const r=document.getElementById('t6Result');r.classList.remove('hidden');r.innerHTML='<b>6怨??먯닔: '+(s*10)+'??/ 100??/b><br>留욏엺 臾명빆: '+s+' / 10';}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <style>
 body{font-family:'Noto Sans KR',sans-serif}
 .tab-active{background:#4f46e5;color:white}
@@ -16,185 +22,230 @@ body{font-family:'Noto Sans KR',sans-serif}
 <body class="bg-slate-100 text-slate-800 min-h-screen">
 <div class="max-w-5xl mx-auto p-4 md:p-8">
 <header class="bg-white rounded-2xl shadow-sm p-6 text-center mb-5">
-<h1 class="text-2xl md:text-3xl font-bold">세종한국어 1A</h1>
-<p class="text-slate-600 mt-2">1~3과 학습 → 1~3과 연습·통합 시험 → 4과 학습 → 4과 연습·개별 시험</p>
-<div class="flex flex-wrap justify-center gap-2 mt-4 no-print">
-<button onclick="showLesson(1)" class="tab tab-active px-4 py-2 rounded-xl font-medium">1과</button>
-<button onclick="showLesson(2)" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">2과</button>
-<button onclick="showLesson(3)" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">3과</button>
-<button onclick="showLesson(5)" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">1~3과 연습·시험</button>
-<button onclick="showLesson(4)" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">4과</button>
-<button onclick="showLesson(6)" class="tab px-4 py-2 rounded-xl font-medium bg-slate-100">4과 연습·시험</button>
-<button onclick="window.print()" class="px-4 py-2 rounded-xl font-medium bg-slate-800 text-white">인쇄/PDF</button>
-</div>
+<h1 class="text-2xl md:text-3xl font-bold">?몄쥌?쒓뎅??1A</h1>
+<p class="text-slate-600 mt-2">1~3怨??숈뒿 ???듯빀 ?쒗뿕 ??4怨??숈뒿쨌?곗뒿 ??4怨??쒗뿕 ??5怨??숈뒿쨌?곗뒿 ??5怨??쒗뿕 ??6怨??숈뒿쨌?곗뒿 ??6怨??쒗뿕</p>
+<div class="flex flex-wrap justify-center gap-2 mt-4 no-print"><button class="tab px-4 py-2 rounded-xl font-medium tab-active" onclick="showLesson(1)">1怨?/button><button class="tab px-4 py-2 rounded-xl font-medium bg-slate-100" onclick="showLesson(2)">2怨?/button><button class="tab px-4 py-2 rounded-xl font-medium bg-slate-100" onclick="showLesson(3)">3怨?/button><button class="tab px-4 py-2 rounded-xl font-medium bg-slate-100" onclick="showLesson(5)">1~3怨??곗뒿쨌?쒗뿕</button><button class="tab px-4 py-2 rounded-xl font-medium bg-slate-100" onclick="showLesson(4)">4怨??숈뒿쨌?곗뒿</button><button class="tab px-4 py-2 rounded-xl font-medium bg-slate-100" onclick="showLesson(6)">4怨??쒗뿕</button><button class="tab px-4 py-2 rounded-xl font-medium bg-slate-100" onclick="showLesson(7)">5怨??숈뒿쨌?곗뒿</button><button class="tab px-4 py-2 rounded-xl font-medium bg-slate-100" onclick="showLesson(9)">5怨??쒗뿕</button><button class="tab px-4 py-2 rounded-xl font-medium bg-slate-100" onclick="showLesson(10)">6怨??숈뒿쨌?곗뒿</button><button class="tab px-4 py-2 rounded-xl font-medium bg-slate-100" onclick="showLesson(12)">6怨??쒗뿕</button></div>
 </header>
-
-<section id="lesson1" class="lesson active bg-white rounded-2xl shadow-sm p-5 md:p-7">
-<h2 class="text-xl font-bold mb-1">1과. 안녕하세요? 저는 안나예요</h2><p class="text-indigo-600 mb-5">주제: 나라 및 직업</p>
+<section class="lesson active bg-white rounded-2xl shadow-sm p-5 md:p-7" id="lesson1">
+<h2 class="text-xl font-bold mb-1">1怨? ?덈뀞?섏꽭?? ????덈굹?덉슂</h2><p class="text-indigo-600 mb-5">二쇱젣: ?섎씪 諛?吏곸뾽</p>
 <div class="grid gap-3 md:grid-cols-2">
-<div class="border rounded-xl p-4"><b>한국</b> · [한ː국] · Korea<br><span class="text-sm">저는 한국 사람이에요.</span></div>
-<div class="border rounded-xl p-4"><b>미국</b> · [미국] · USA<br><span class="text-sm">마리 씨는 미국 사람이에요.</span></div>
-<div class="border rounded-xl p-4"><b>중국</b> · [중국] · China<br><span class="text-sm">웨이 씨는 중국 사람이에요.</span></div>
-<div class="border rounded-xl p-4"><b>일본</b> · [일본] · Japan<br><span class="text-sm">타나카 씨는 일본 사람이에요.</span></div>
-<div class="border rounded-xl p-4"><b>학생</b> · [학쌩] · Student<br><span class="text-sm">안나 씨는 학생이에요.</span></div>
-<div class="border rounded-xl p-4"><b>회사원</b> · [회사원/훼사원] · Office worker<br><span class="text-sm">주노 씨는 회사원이에요.</span></div>
-<div class="border rounded-xl p-4"><b>선생님</b> · [선생님] · Teacher<br><span class="text-sm">박지윤 씨는 선생님이에요.</span></div>
-<div class="border rounded-xl p-4"><b>의사</b> · [의사] · Doctor<br><span class="text-sm">이서준 씨는 의사예요.</span></div>
-<div class="border rounded-xl p-4"><b>요리사</b> · [요리사] · Chef / Cook<br><span class="text-sm">아버지는 요리사예요.</span></div>
-<div class="border rounded-xl p-4"><b>누구</b> · [누구] · Who<br><span class="text-sm">이 사람은 누구예요?</span></div>
+<div class="border rounded-xl p-4"><b>?쒓뎅</b> 쨌 [?쑰먭뎅] 쨌 Korea<br/><span class="text-sm">????쒓뎅 ?щ엺?댁뿉??</span></div>
+<div class="border rounded-xl p-4"><b>誘멸뎅</b> 쨌 [誘멸뎅] 쨌 USA<br/><span class="text-sm">留덈━ ?⑤뒗 誘멸뎅 ?щ엺?댁뿉??</span></div>
+<div class="border rounded-xl p-4"><b>以묎뎅</b> 쨌 [以묎뎅] 쨌 China<br/><span class="text-sm">?⑥씠 ?⑤뒗 以묎뎅 ?щ엺?댁뿉??</span></div>
+<div class="border rounded-xl p-4"><b>?쇰낯</b> 쨌 [?쇰낯] 쨌 Japan<br/><span class="text-sm">??섏뭅 ?⑤뒗 ?쇰낯 ?щ엺?댁뿉??</span></div>
+<div class="border rounded-xl p-4"><b>?숈깮</b> 쨌 [?숈뙥] 쨌 Student<br/><span class="text-sm">?덈굹 ?⑤뒗 ?숈깮?댁뿉??</span></div>
+<div class="border rounded-xl p-4"><b>?뚯궗??/b> 쨌 [?뚯궗???쇱궗?? 쨌 Office worker<br/><span class="text-sm">二쇰끂 ?⑤뒗 ?뚯궗?먯씠?먯슂.</span></div>
+<div class="border rounded-xl p-4"><b>?좎깮??/b> 쨌 [?좎깮?? 쨌 Teacher<br/><span class="text-sm">諛뺤????⑤뒗 ?좎깮?섏씠?먯슂.</span></div>
+<div class="border rounded-xl p-4"><b>?섏궗</b> 쨌 [?섏궗] 쨌 Doctor<br/><span class="text-sm">?댁꽌以 ?⑤뒗 ?섏궗?덉슂.</span></div>
+<div class="border rounded-xl p-4"><b>?붾━??/b> 쨌 [?붾━?? 쨌 Chef / Cook<br/><span class="text-sm">?꾨쾭吏???붾━?ъ삁??</span></div>
+<div class="border rounded-xl p-4"><b>?꾧뎄</b> 쨌 [?꾧뎄] 쨌 Who<br/><span class="text-sm">???щ엺? ?꾧뎄?덉슂?</span></div>
 </div></section>
-
-<section id="lesson2" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
-<h2 class="text-xl font-bold mb-1">2과. 전화번호가 뭐예요?</h2><p class="text-emerald-600 mb-5">주제: 숫자 및 연락처</p>
+<section class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7" id="lesson2">
+<h2 class="text-xl font-bold mb-1">2怨? ?꾪솕踰덊샇媛 萸먯삁??</h2><p class="text-emerald-600 mb-5">二쇱젣: ?レ옄 諛??곕씫泥?/p>
 <div class="grid gap-3 md:grid-cols-2">
-<div class="border rounded-xl p-4"><b>전화번호</b> · [전화번호] · Phone number<br><span class="text-sm">전화번호가 뭐예요?</span></div>
-<div class="border rounded-xl p-4"><b>몇</b> · [먗] · How many / What (number)<br><span class="text-sm">몇 층이에요? / 몇 번이에요?</span></div>
-<div class="border rounded-xl p-4"><b>층</b> · [층] · Floor<br><span class="text-sm">영화관이 7층에 있어요.</span></div>
-<div class="border rounded-xl p-4"><b>얼마</b> · [얼마] · How much<br><span class="text-sm">우유가 얼마예요?</span></div>
-<div class="border rounded-xl p-4"><b>카페</b> · [카페] · Cafe<br><span class="text-sm">카페가 4층이에요.</span></div>
-<div class="border rounded-xl p-4"><b>식당</b> · [식땅] · Restaurant<br><span class="text-sm">여기는 한국 식당이에요.</span></div>
-<div class="border rounded-xl p-4"><b>맞다</b> · [맏따] (맞아요 [마자요]) · To be correct<br><span class="text-sm">네, 전화번호가 맞아요.</span></div>
-<div class="border rounded-xl p-4"><b>형</b> · [형] · Older brother (for male)<br><span class="text-sm">이 사람은 제 형이에요.</span></div>
-<div class="border rounded-xl p-4"><b>언니</b> · [언니] · Older sister (for female)<br><span class="text-sm">친구가 아니에요. 언니예요.</span></div>
-<div class="border rounded-xl p-4"><b>주소</b> · [주소] · Address<br><span class="text-sm">이메일 주소를 가르쳐 주세요.</span></div>
+<div class="border rounded-xl p-4"><b>?꾪솕踰덊샇</b> 쨌 [?꾪솕踰덊샇] 쨌 Phone number<br/><span class="text-sm">?꾪솕踰덊샇媛 萸먯삁??</span></div>
+<div class="border rounded-xl p-4"><b>紐?/b> 쨌 [癒? 쨌 How many / What (number)<br/><span class="text-sm">紐?痢듭씠?먯슂? / 紐?踰덉씠?먯슂?</span></div>
+<div class="border rounded-xl p-4"><b>痢?/b> 쨌 [痢? 쨌 Floor<br/><span class="text-sm">?곹솕愿??7痢듭뿉 ?덉뼱??</span></div>
+<div class="border rounded-xl p-4"><b>?쇰쭏</b> 쨌 [?쇰쭏] 쨌 How much<br/><span class="text-sm">?곗쑀媛 ?쇰쭏?덉슂?</span></div>
+<div class="border rounded-xl p-4"><b>移댄럹</b> 쨌 [移댄럹] 쨌 Cafe<br/><span class="text-sm">移댄럹媛 4痢듭씠?먯슂.</span></div>
+<div class="border rounded-xl p-4"><b>?앸떦</b> 쨌 [?앸븙] 쨌 Restaurant<br/><span class="text-sm">?ш린???쒓뎅 ?앸떦?댁뿉??</span></div>
+<div class="border rounded-xl p-4"><b>留욌떎</b> 쨌 [留뤿뵲] (留욎븘??[留덉옄??) 쨌 To be correct<br/><span class="text-sm">?? ?꾪솕踰덊샇媛 留욎븘??</span></div>
+<div class="border rounded-xl p-4"><b>??/b> 쨌 [?? 쨌 Older brother (for male)<br/><span class="text-sm">???щ엺? ???뺤씠?먯슂.</span></div>
+<div class="border rounded-xl p-4"><b>?몃땲</b> 쨌 [?몃땲] 쨌 Older sister (for female)<br/><span class="text-sm">移쒓뎄媛 ?꾨땲?먯슂. ?몃땲?덉슂.</span></div>
+<div class="border rounded-xl p-4"><b>二쇱냼</b> 쨌 [二쇱냼] 쨌 Address<br/><span class="text-sm">?대찓??二쇱냼瑜?媛瑜댁퀜 二쇱꽭??</span></div>
 </div></section>
-
-<section id="lesson3" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
-<h2 class="text-xl font-bold mb-1">3과. 제 가방은 책상 옆에 있어요</h2><p class="text-purple-600 mb-5">주제: 물건 및 위치</p>
+<section class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7" id="lesson3">
+<h2 class="text-xl font-bold mb-1">3怨? ??媛諛⑹? 梨낆긽 ?놁뿉 ?덉뼱??/h2><p class="text-purple-600 mb-5">二쇱젣: 臾쇨굔 諛??꾩튂</p>
 <div class="grid gap-3 md:grid-cols-2">
-<div class="border rounded-xl p-4"><b>책상</b> · [책쌍] · Desk<br><span class="text-sm">책상 위에 컴퓨터가 있어요.</span></div>
-<div class="border rounded-xl p-4"><b>의자</b> · [의자] · Chair<br><span class="text-sm">의자 아래에 가방이 있어요.</span></div>
-<div class="border rounded-xl p-4"><b>필통</b> · [필통] · Pencil case<br><span class="text-sm">필통 안에 펜이 있어요.</span></div>
-<div class="border rounded-xl p-4"><b>시계</b> · [시계/시게] · Clock / Watch<br><span class="text-sm">방에 시계가 없어요.</span></div>
-<div class="border rounded-xl p-4"><b>위 / 아래 / 밑</b> · Top / Below / Bottom<br><span class="text-sm">책이 책상 위에 있어요.</span></div>
-<div class="border rounded-xl p-4"><b>앞 / 뒤</b> · Front / Back<br><span class="text-sm">선생님이 칠판 앞에 계십니다.</span></div>
-<div class="border rounded-xl p-4"><b>옆 / 사이</b> · Beside / Between<br><span class="text-sm">침대 옆에 책상이 있어요.</span></div>
-<div class="border rounded-xl p-4"><b>안 / 밖</b> · Inside / Outside<br><span class="text-sm">학생들이 교실 안에 있어요.</span></div>
-<div class="border rounded-xl p-4"><b>침대</b> · [침대] · Bed<br><span class="text-sm">제 방에 침대가 있어요.</span></div>
-<div class="border rounded-xl p-4"><b>우산</b> · [우산] · Umbrella<br><span class="text-sm">우산이 의자 옆에 있어요.</span></div>
+<div class="border rounded-xl p-4"><b>梨낆긽</b> 쨌 [梨낆뙇] 쨌 Desk<br/><span class="text-sm">梨낆긽 ?꾩뿉 而댄벂?곌? ?덉뼱??</span></div>
+<div class="border rounded-xl p-4"><b>?섏옄</b> 쨌 [?섏옄] 쨌 Chair<br/><span class="text-sm">?섏옄 ?꾨옒??媛諛⑹씠 ?덉뼱??</span></div>
+<div class="border rounded-xl p-4"><b>?꾪넻</b> 쨌 [?꾪넻] 쨌 Pencil case<br/><span class="text-sm">?꾪넻 ?덉뿉 ?쒖씠 ?덉뼱??</span></div>
+<div class="border rounded-xl p-4"><b>?쒓퀎</b> 쨌 [?쒓퀎/?쒓쾶] 쨌 Clock / Watch<br/><span class="text-sm">諛⑹뿉 ?쒓퀎媛 ?놁뼱??</span></div>
+<div class="border rounded-xl p-4"><b>??/ ?꾨옒 / 諛?/b> 쨌 Top / Below / Bottom<br/><span class="text-sm">梨낆씠 梨낆긽 ?꾩뿉 ?덉뼱??</span></div>
+<div class="border rounded-xl p-4"><b>??/ ??/b> 쨌 Front / Back<br/><span class="text-sm">?좎깮?섏씠 移좏뙋 ?욎뿉 怨꾩떗?덈떎.</span></div>
+<div class="border rounded-xl p-4"><b>??/ ?ъ씠</b> 쨌 Beside / Between<br/><span class="text-sm">移⑤? ?놁뿉 梨낆긽???덉뼱??</span></div>
+<div class="border rounded-xl p-4"><b>??/ 諛?/b> 쨌 Inside / Outside<br/><span class="text-sm">?숈깮?ㅼ씠 援먯떎 ?덉뿉 ?덉뼱??</span></div>
+<div class="border rounded-xl p-4"><b>移⑤?</b> 쨌 [移⑤?] 쨌 Bed<br/><span class="text-sm">??諛⑹뿉 移⑤?媛 ?덉뼱??</span></div>
+<div class="border rounded-xl p-4"><b>?곗궛</b> 쨌 [?곗궛] 쨌 Umbrella<br/><span class="text-sm">?곗궛???섏옄 ?놁뿉 ?덉뼱??</span></div>
 </div></section>
-
-<section id="lesson4" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
-<h2 class="text-xl font-bold mb-1">4과. 한국어를 공부해요</h2>
-<p class="text-rose-600 mb-5">주제: 기본 동사와 일상생활 · 문법: -아요/어요, 을/를</p>
+<section class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7" id="lesson4">
+<h2 class="text-xl font-bold mb-1">4怨? ?쒓뎅?대? 怨듬??댁슂</h2>
+<p class="text-rose-600 mb-5">二쇱젣: 湲곕낯 ?숈궗? ?쇱긽?앺솢 쨌 臾몃쾿: -?꾩슂/?댁슂, ??瑜?/p>
 <div class="mb-6">
-<h3 class="font-bold text-lg mb-3">A. 어휘 학습</h3>
+<h3 class="font-bold text-lg mb-3">A. ?댄쐶 ?숈뒿</h3>
 <div class="grid gap-3 md:grid-cols-2">
-<div class="border rounded-xl p-4"><b>먹어요</b> · eat<br><span class="text-sm">밥을 먹어요.</span></div>
-<div class="border rounded-xl p-4"><b>읽어요</b> · read<br><span class="text-sm">책을 읽어요.</span></div>
-<div class="border rounded-xl p-4"><b>봐요</b> · watch / see<br><span class="text-sm">영화를 봐요.</span></div>
-<div class="border rounded-xl p-4"><b>마셔요</b> · drink<br><span class="text-sm">물을 마셔요.</span></div>
-<div class="border rounded-xl p-4"><b>들어요</b> · listen / hear<br><span class="text-sm">음악을 들어요.</span></div>
-<div class="border rounded-xl p-4"><b>만나요</b> · meet<br><span class="text-sm">친구를 만나요.</span></div>
-<div class="border rounded-xl p-4"><b>자요</b> · sleep<br><span class="text-sm">밤에 자요.</span></div>
-<div class="border rounded-xl p-4"><b>일해요</b> · work<br><span class="text-sm">회사에서 일해요.</span></div>
-<div class="border rounded-xl p-4"><b>요리해요</b> · cook<br><span class="text-sm">저녁에 요리해요.</span></div>
-<div class="border rounded-xl p-4"><b>공부해요</b> · study<br><span class="text-sm">한국어를 공부해요.</span></div>
-<div class="border rounded-xl p-4"><b>오늘 / 지금</b> · today / now<br><span class="text-sm">오늘 지금 공부해요.</span></div>
-<div class="border rounded-xl p-4"><b>불고기 / 피자 / 김치</b> · food<br><span class="text-sm">불고기를 좋아해요.</span></div>
-<div class="border rounded-xl p-4"><b>좋아하다</b> · to like<br><span class="text-sm">음악을 좋아해요.</span></div>
-<div class="border rounded-xl p-4"><b>꽃 / 고양이 / 음악 / 게임</b> · flower / cat / music / game<br><span class="text-sm">고양이를 좋아해요.</span></div>
-<div class="border rounded-xl p-4"><b>쇼핑 / 옷 / 사다</b> · shopping / clothes / buy<br><span class="text-sm">옷을 사요.</span></div>
-<div class="border rounded-xl p-4"><b>공원 / 운동하다</b> · park / exercise<br><span class="text-sm">공원에서 운동해요.</span></div>
+<div class="border rounded-xl p-4"><b>癒뱀뼱??/b> 쨌 eat<br/><span class="text-sm">諛μ쓣 癒뱀뼱??</span></div>
+<div class="border rounded-xl p-4"><b>?쎌뼱??/b> 쨌 read<br/><span class="text-sm">梨낆쓣 ?쎌뼱??</span></div>
+<div class="border rounded-xl p-4"><b>遊먯슂</b> 쨌 watch / see<br/><span class="text-sm">?곹솕瑜?遊먯슂.</span></div>
+<div class="border rounded-xl p-4"><b>留덉뀛??/b> 쨌 drink<br/><span class="text-sm">臾쇱쓣 留덉뀛??</span></div>
+<div class="border rounded-xl p-4"><b>?ㅼ뼱??/b> 쨌 listen / hear<br/><span class="text-sm">?뚯븙???ㅼ뼱??</span></div>
+<div class="border rounded-xl p-4"><b>留뚮굹??/b> 쨌 meet<br/><span class="text-sm">移쒓뎄瑜?留뚮굹??</span></div>
+<div class="border rounded-xl p-4"><b>?먯슂</b> 쨌 sleep<br/><span class="text-sm">諛ㅼ뿉 ?먯슂.</span></div>
+<div class="border rounded-xl p-4"><b>?쇳빐??/b> 쨌 work<br/><span class="text-sm">?뚯궗?먯꽌 ?쇳빐??</span></div>
+<div class="border rounded-xl p-4"><b>?붾━?댁슂</b> 쨌 cook<br/><span class="text-sm">??곸뿉 ?붾━?댁슂.</span></div>
+<div class="border rounded-xl p-4"><b>怨듬??댁슂</b> 쨌 study<br/><span class="text-sm">?쒓뎅?대? 怨듬??댁슂.</span></div>
+<div class="border rounded-xl p-4"><b>?ㅻ뒛 / 吏湲?/b> 쨌 today / now<br/><span class="text-sm">?ㅻ뒛 吏湲?怨듬??댁슂.</span></div>
+<div class="border rounded-xl p-4"><b>遺덇퀬湲?/ ?쇱옄 / 源移?/b> 쨌 food<br/><span class="text-sm">遺덇퀬湲곕? 醫뗭븘?댁슂.</span></div>
+<div class="border rounded-xl p-4"><b>醫뗭븘?섎떎</b> 쨌 to like<br/><span class="text-sm">?뚯븙??醫뗭븘?댁슂.</span></div>
+<div class="border rounded-xl p-4"><b>苑?/ 怨좎뼇??/ ?뚯븙 / 寃뚯엫</b> 쨌 flower / cat / music / game<br/><span class="text-sm">怨좎뼇?대? 醫뗭븘?댁슂.</span></div>
+<div class="border rounded-xl p-4"><b>?쇳븨 / ??/ ?щ떎</b> 쨌 shopping / clothes / buy<br/><span class="text-sm">?룹쓣 ?ъ슂.</span></div>
+<div class="border rounded-xl p-4"><b>怨듭썝 / ?대룞?섎떎</b> 쨌 park / exercise<br/><span class="text-sm">怨듭썝?먯꽌 ?대룞?댁슂.</span></div>
 </div></div>
 <div class="mb-6">
-<h3 class="font-bold text-lg mb-3">B. 문법 핵심</h3>
+<h3 class="font-bold text-lg mb-3">B. 臾몃쾿 ?듭떖</h3>
 <div class="border rounded-xl p-4 space-y-2">
-<p><b>1) -아요/어요</b> : 동사를 현재형으로 말해요.</p>
-<p class="text-sm">공부하다 → 공부해요 / 먹다 → 먹어요 / 보다 → 봐요 / 듣다 → 들어요</p>
-<p><b>2) 을/를</b> : 동작의 대상을 나타내요.</p>
-<p class="text-sm">받침 있음: 밥<strong>을</strong> 먹어요. · 받침 없음: 피자<strong>를</strong> 먹어요.</p>
+<p><b>1) -?꾩슂/?댁슂</b> : ?숈궗瑜??꾩옱?뺤쑝濡?留먰빐??</p>
+<p class="text-sm">怨듬??섎떎 ??怨듬??댁슂 / 癒밸떎 ??癒뱀뼱??/ 蹂대떎 ??遊먯슂 / ?ｋ떎 ???ㅼ뼱??/p>
+<p><b>2) ??瑜?/b> : ?숈옉????곸쓣 ?섑??댁슂.</p>
+<p class="text-sm">諛쏆묠 ?덉쓬: 諛?strong>??/strong> 癒뱀뼱?? 쨌 諛쏆묠 ?놁쓬: ?쇱옄<strong>瑜?/strong> 癒뱀뼱??</p>
 </div></div>
 <div class="mb-6">
-<h3 class="font-bold text-lg mb-3">C. 짧은 문법 연습</h3>
+<h3 class="font-bold text-lg mb-3">C. 吏㏃? 臾몃쾿 ?곗뒿</h3>
 <div class="space-y-3">
-<label class="block">1. 저는 한국어를 <input id="g1" class="border rounded-lg p-2 w-36" placeholder="공부해요">.</label>
-<label class="block">2. 민수 씨는 밥을 <input id="g2" class="border rounded-lg p-2 w-36" placeholder="먹어요">.</label>
-<label class="block">3. 안나 씨는 영화를 <input id="g3" class="border rounded-lg p-2 w-36" placeholder="봐요">.</label>
-<label class="block">4. 저는 음악을 <input id="g4" class="border rounded-lg p-2 w-36" placeholder="들어요">.</label>
-<label class="block">5. 한국어<input id="g5" class="border rounded-lg p-2 w-16" placeholder="을/를"> 공부해요.</label>
-<label class="block">6. 피자<input id="g6" class="border rounded-lg p-2 w-16" placeholder="을/를"> 먹어요.</label>
-<label class="block">7. 친구<input id="g7" class="border rounded-lg p-2 w-16" placeholder="을/를"> 만나요.</label>
+<label class="block">1. ????쒓뎅?대? <input class="border rounded-lg p-2 w-36" id="g1" placeholder="怨듬??댁슂"/>.</label>
+<label class="block">2. 誘쇱닔 ?⑤뒗 諛μ쓣 <input class="border rounded-lg p-2 w-36" id="g2" placeholder="癒뱀뼱??/>.</label>
+<label class="block">3. ?덈굹 ?⑤뒗 ?곹솕瑜?<input class="border rounded-lg p-2 w-36" id="g3" placeholder="遊먯슂"/>.</label>
+<label class="block">4. ????뚯븙??<input class="border rounded-lg p-2 w-36" id="g4" placeholder="?ㅼ뼱??/>.</label>
+<label class="block">5. ?쒓뎅??input class="border rounded-lg p-2 w-16" id="g5" placeholder="??瑜?/> 怨듬??댁슂.</label>
+<label class="block">6. ?쇱옄<input class="border rounded-lg p-2 w-16" id="g6" placeholder="??瑜?/> 癒뱀뼱??</label>
+<label class="block">7. 移쒓뎄<input class="border rounded-lg p-2 w-16" id="g7" placeholder="??瑜?/> 留뚮굹??</label>
 </div>
-<button onclick="checkGrammar()" class="mt-4 bg-rose-600 text-white font-bold py-2 px-4 rounded-xl">문법 연습 확인</button>
-<div id="grammarResult" class="mt-3 hidden rounded-xl bg-rose-50 p-4"></div>
+<button class="mt-4 bg-rose-600 text-white font-bold py-2 px-4 rounded-xl" onclick="checkGrammar()">臾몃쾿 ?곗뒿 ?뺤씤</button>
+<div class="mt-3 hidden rounded-xl bg-rose-50 p-4" id="grammarResult"></div>
 </div>
 </section>
-
-<section id="lesson5" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
-<h2 class="text-xl font-bold">1~3과 통합 시험</h2><p class="text-slate-500 mb-5">제한시간: 20분 · 10문항 · 100점</p>
-<label class="block mb-5">이름 <input id="studentName" class="border rounded-lg p-2 ml-2" placeholder="이름"></label>
+<section class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7" id="lesson5">
+<h2 class="text-xl font-bold">1~3怨??듯빀 ?쒗뿕</h2><p class="text-slate-500 mb-5">?쒗븳?쒓컙: 20遺?쨌 10臾명빆 쨌 100??/p>
+<label class="block mb-5">?대쫫 <input class="border rounded-lg p-2 ml-2" id="studentName" placeholder="?대쫫"/></label>
 <div class="space-y-6">
-<div><b>1.</b> 병원에서 환자를 치료해요. <select id="q1" class="border rounded-lg p-2"><option value="">선택</option><option>요리사</option><option value="의사">의사</option><option>회사원</option><option>선생님</option></select></div>
-<div><b>2.</b> 학교에서 학생을 가르쳐요. <select id="q2" class="border rounded-lg p-2"><option value="">선택</option><option>요리사</option><option>의사</option><option>회사원</option><option value="선생님">선생님</option></select></div>
-<div><b>3.</b> 식당에서 맛있는 음식을 만들어요. <select id="q3" class="border rounded-lg p-2"><option value="">선택</option><option value="요리사">요리사</option><option>의사</option><option>회사원</option><option>선생님</option></select></div>
-<div><b>4.</b> 8 층 → <input id="q4" class="border rounded-lg p-2 w-24"> 층</div>
-<div><b>5.</b> 15 번 → <input id="q5" class="border rounded-lg p-2 w-24"> 번</div>
-<div><b>6.</b> 203 호 → 이백 <input id="q6" class="border rounded-lg p-2 w-24"> 호</div>
-<div><b>7.</b> 컴퓨터가 책상 <select id="q7" class="border rounded-lg p-2"><option value="">선택</option><option value="위">위</option><option>안</option><option>옆</option><option>아래</option></select>에 있어요.</div>
-<div><b>8.</b> 펜이 필통 <select id="q8" class="border rounded-lg p-2"><option value="">선택</option><option>위</option><option value="안">안</option><option>옆</option><option>아래</option></select>에 있어요.</div>
-<div><b>9.</b> 저는 학생 <select id="q9" class="border rounded-lg p-2"><option value="">선택</option><option value="이에요">이에요</option><option>예요</option></select></div>
-<div><b>10.</b> 동생이에요? → 아니요, 동생이 <select id="q10" class="border rounded-lg p-2"><option value="">선택</option><option>이에요</option><option value="아니에요">아니에요</option></select></div>
+<div><b>1.</b> 蹂묒썝?먯꽌 ?섏옄瑜?移섎즺?댁슂. <select class="border rounded-lg p-2" id="q1"><option value="">?좏깮</option><option>?붾━??/option><option value="?섏궗">?섏궗</option><option>?뚯궗??/option><option>?좎깮??/option></select></div>
+<div><b>2.</b> ?숆탳?먯꽌 ?숈깮??媛瑜댁퀜?? <select class="border rounded-lg p-2" id="q2"><option value="">?좏깮</option><option>?붾━??/option><option>?섏궗</option><option>?뚯궗??/option><option value="?좎깮??>?좎깮??/option></select></div>
+<div><b>3.</b> ?앸떦?먯꽌 留쏆엳???뚯떇??留뚮뱾?댁슂. <select class="border rounded-lg p-2" id="q3"><option value="">?좏깮</option><option value="?붾━??>?붾━??/option><option>?섏궗</option><option>?뚯궗??/option><option>?좎깮??/option></select></div>
+<div><b>4.</b> 8 痢???<input class="border rounded-lg p-2 w-24" id="q4"/> 痢?/div>
+<div><b>5.</b> 15 踰???<input class="border rounded-lg p-2 w-24" id="q5"/> 踰?/div>
+<div><b>6.</b> 203 ?????대갚 <input class="border rounded-lg p-2 w-24" id="q6"/> ??/div>
+<div><b>7.</b> 而댄벂?곌? 梨낆긽 <select class="border rounded-lg p-2" id="q7"><option value="">?좏깮</option><option value="??>??/option><option>??/option><option>??/option><option>?꾨옒</option></select>???덉뼱??</div>
+<div><b>8.</b> ?쒖씠 ?꾪넻 <select class="border rounded-lg p-2" id="q8"><option value="">?좏깮</option><option>??/option><option value="??>??/option><option>??/option><option>?꾨옒</option></select>???덉뼱??</div>
+<div><b>9.</b> ????숈깮 <select class="border rounded-lg p-2" id="q9"><option value="">?좏깮</option><option value="?댁뿉??>?댁뿉??/option><option>?덉슂</option></select></div>
+<div><b>10.</b> ?숈깮?댁뿉?? ???꾨땲?? ?숈깮??<select class="border rounded-lg p-2" id="q10"><option value="">?좏깮</option><option>?댁뿉??/option><option value="?꾨땲?먯슂">?꾨땲?먯슂</option></select></div>
 </div>
-<button onclick="grade()" class="mt-7 w-full bg-indigo-600 text-white font-bold py-3 rounded-xl">채점하기</button>
-<div id="result" class="mt-5 hidden rounded-xl bg-indigo-50 p-5"></div>
+<button class="mt-7 w-full bg-indigo-600 text-white font-bold py-3 rounded-xl" onclick="grade()">梨꾩젏?섍린</button>
+<div class="mt-5 hidden rounded-xl bg-indigo-50 p-5" id="result"></div>
 </section>
-
-<section id="lesson6" class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7">
-<h2 class="text-xl font-bold mb-1">4과 단원평가</h2>
-<p class="text-slate-500 mb-5">4과 어휘·문법만 평가합니다 · 10문항 · 100점</p>
-<label class="block mb-5">이름 <input id="l4Name" class="border rounded-lg p-2 ml-2" placeholder="이름"></label>
+<section class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7" id="lesson6">
+<h2 class="text-xl font-bold mb-1">4怨??⑥썝?됯?</h2>
+<p class="text-slate-500 mb-5">4怨??댄쐶쨌臾몃쾿留??됯??⑸땲??쨌 10臾명빆 쨌 100??/p>
+<label class="block mb-5">?대쫫 <input class="border rounded-lg p-2 ml-2" id="l4Name" placeholder="?대쫫"/></label>
 <div class="space-y-5">
-<div><b>1.</b> 밥을 ______. <select id="l4q1" class="border rounded-lg p-2"><option value="">선택</option><option value="먹어요">먹어요</option><option>마셔요</option><option>읽어요</option></select></div>
-<div><b>2.</b> 책을 ______. <select id="l4q2" class="border rounded-lg p-2"><option value="">선택</option><option>봐요</option><option value="읽어요">읽어요</option><option>자요</option></select></div>
-<div><b>3.</b> 영화를 ______. <select id="l4q3" class="border rounded-lg p-2"><option value="">선택</option><option value="봐요">봐요</option><option>들어요</option><option>일해요</option></select></div>
-<div><b>4.</b> 음악을 ______. <select id="l4q4" class="border rounded-lg p-2"><option value="">선택</option><option>만나요</option><option value="들어요">들어요</option><option>요리해요</option></select></div>
-<div><b>5.</b> 한국어___ 공부해요. <select id="l4q5" class="border rounded-lg p-2"><option value="">선택</option><option>이</option><option value="를">를</option><option>은</option></select></div>
-<div><b>6.</b> 밥___ 먹어요. <select id="l4q6" class="border rounded-lg p-2"><option value="">선택</option><option value="을">을</option><option>를</option><option>이</option></select></div>
-<div><b>7.</b> 피자___ 먹어요. <select id="l4q7" class="border rounded-lg p-2"><option value="">선택</option><option>을</option><option value="를">를</option><option>은</option></select></div>
-<div><b>8.</b> 친구___ 만나요. <select id="l4q8" class="border rounded-lg p-2"><option value="">선택</option><option>이</option><option value="를">를</option><option>은</option></select></div>
-<div><b>9.</b> ‘study’의 한국어는? <select id="l4q9" class="border rounded-lg p-2"><option value="">선택</option><option>일해요</option><option value="공부해요">공부해요</option><option>자요</option></select></div>
-<div><b>10.</b> ‘exercise’의 한국어는? <select id="l4q10" class="border rounded-lg p-2"><option value="">선택</option><option>쇼핑해요</option><option value="운동해요">운동해요</option><option>만나요</option></select></div>
+<div><b>1.</b> 諛μ쓣 ______. <select class="border rounded-lg p-2" id="l4q1"><option value="">?좏깮</option><option value="癒뱀뼱??>癒뱀뼱??/option><option>留덉뀛??/option><option>?쎌뼱??/option></select></div>
+<div><b>2.</b> 梨낆쓣 ______. <select class="border rounded-lg p-2" id="l4q2"><option value="">?좏깮</option><option>遊먯슂</option><option value="?쎌뼱??>?쎌뼱??/option><option>?먯슂</option></select></div>
+<div><b>3.</b> ?곹솕瑜?______. <select class="border rounded-lg p-2" id="l4q3"><option value="">?좏깮</option><option value="遊먯슂">遊먯슂</option><option>?ㅼ뼱??/option><option>?쇳빐??/option></select></div>
+<div><b>4.</b> ?뚯븙??______. <select class="border rounded-lg p-2" id="l4q4"><option value="">?좏깮</option><option>留뚮굹??/option><option value="?ㅼ뼱??>?ㅼ뼱??/option><option>?붾━?댁슂</option></select></div>
+<div><b>5.</b> ?쒓뎅??__ 怨듬??댁슂. <select class="border rounded-lg p-2" id="l4q5"><option value="">?좏깮</option><option>??/option><option value="瑜?>瑜?/option><option>?</option></select></div>
+<div><b>6.</b> 諛?__ 癒뱀뼱?? <select class="border rounded-lg p-2" id="l4q6"><option value="">?좏깮</option><option value="??>??/option><option>瑜?/option><option>??/option></select></div>
+<div><b>7.</b> ?쇱옄___ 癒뱀뼱?? <select class="border rounded-lg p-2" id="l4q7"><option value="">?좏깮</option><option>??/option><option value="瑜?>瑜?/option><option>?</option></select></div>
+<div><b>8.</b> 移쒓뎄___ 留뚮굹?? <select class="border rounded-lg p-2" id="l4q8"><option value="">?좏깮</option><option>??/option><option value="瑜?>瑜?/option><option>?</option></select></div>
+<div><b>9.</b> ?쁲tudy?숈쓽 ?쒓뎅?대뒗? <select class="border rounded-lg p-2" id="l4q9"><option value="">?좏깮</option><option>?쇳빐??/option><option value="怨듬??댁슂">怨듬??댁슂</option><option>?먯슂</option></select></div>
+<div><b>10.</b> ?쁢xercise?숈쓽 ?쒓뎅?대뒗? <select class="border rounded-lg p-2" id="l4q10"><option value="">?좏깮</option><option>?쇳븨?댁슂</option><option value="?대룞?댁슂">?대룞?댁슂</option><option>留뚮굹??/option></select></div>
 </div>
-<button onclick="gradeLesson4()" class="mt-7 w-full bg-rose-600 text-white font-bold py-3 rounded-xl">4과 채점하기</button>
-<div id="lesson4Result" class="mt-5 hidden rounded-xl bg-rose-50 p-5"></div>
+<button class="mt-7 w-full bg-rose-600 text-white font-bold py-3 rounded-xl" onclick="gradeLesson4()">4怨?梨꾩젏?섍린</button>
+<div class="mt-5 hidden rounded-xl bg-rose-50 p-5" id="lesson4Result"></div>
+</section>
+<section class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7" id="lesson7">
+<h2 class="text-xl font-bold mb-1">5怨? ?대뵒??媛?? 쨌 ?숈뒿 諛??곗뒿</h2><p class="text-blue-600 mb-5">?댄쐶: ?μ냼쨌?앺뭹 / 臾몃쾿: ??媛?? ?섍퀬</p>
+<div class="grid gap-3 md:grid-cols-2">
+<div class="border rounded-xl p-4"><b>?μ냼</b><br/>?숆탳 쨌 ?뚯궗 쨌 ?앸떦 쨌 移댄럹 쨌 怨듭썝 쨌 留덊듃 쨌 ?곹솕愿 쨌 諛깊솕??/div>
+<div class="border rounded-xl p-4"><b>?앺뭹</b><br/>鍮?쨌 ?쇰㈃ 쨌 怨쇱씪 쨌 而ㅽ뵾 쨌 李?쨌 ?곗쑀 쨌 怨쇱옄 쨌 ?꾩씠?ㅽ겕由?쨌 源諛?쨌 ?ш낵 쨌 ?щ룄 쨌 耳?댄겕</div>
+<div class="border rounded-xl p-4"><b>臾몃쾿 1: ??媛??/b><br/>?μ냼 + ??媛??<br/>?? ?숆탳??媛?? / ?곹솕愿??媛??</div>
+<div class="border rounded-xl p-4"><b>臾몃쾿 2: ?섍퀬</b><br/>紐낆궗 + ?섍퀬 + 紐낆궗<br/>?? ?쇰㈃?섍퀬 源諛μ쓣 癒뱀뼱??</div>
+</div><div class="mt-8 pt-6 border-t-2 border-dashed border-slate-300"><h3 class="text-xl font-bold mb-4">5怨? ?숈뒿 諛??곗뒿 - 媛뺥솕 ?곗뒿</h3></div>
+<p class="text-blue-600 mb-5">?댄쐶 諛?臾몃쾿 媛뺥솕 ?곗뒿</p>
+<div class="space-y-4">
+<div class="border rounded-xl p-4"><h3 class="font-bold mb-2">A. ?댄쐶 ?좏깮</h3>
+<label class="block mb-2">1. park = <select class="border rounded p-2" id="p5w1"><option></option><option>怨듭썝</option><option>留덊듃</option><option>?뚯궗</option></select></label>
+<label class="block mb-2">2. market = <select class="border rounded p-2" id="p5w2"><option></option><option>移댄럹</option><option>留덊듃</option><option>?앸떦</option></select></label>
+<label class="block mb-2">3. snack = <select class="border rounded p-2" id="p5w3"><option></option><option>怨쇱옄</option><option>怨쇱씪</option><option>鍮?/option></select></label>
+<label class="block mb-2">4. restaurant = <select class="border rounded p-2" id="p5w4"><option></option><option>?앸떦</option><option>怨듭썝</option><option>移댄럹</option></select></label>
+<label class="block mb-2">5. coffee = <select class="border rounded p-2" id="p5w5"><option></option><option>?곗쑀</option><option>而ㅽ뵾</option><option>李?/option></select></label></div>
+<div class="border rounded-xl p-4"><h3 class="font-bold mb-2">B. 臾몃쾿 ?곗뒿: ??媛??/ ?섍퀬</h3>
+<label class="block mb-2">6. ?숆탳___ 媛?? <select class="border rounded p-2" id="p5w6"><option></option><option>??/option><option>瑜?/option><option>?섍퀬</option></select></label>
+<label class="block mb-2">7. 而ㅽ뵾___ 李⑤? 留덉뀛?? <select class="border rounded p-2" id="p5w7"><option></option><option>??/option><option>?섍퀬</option><option>瑜?/option></select></label>
+<label class="block mb-2">8. ???留덊듃___ 媛?? <select class="border rounded p-2" id="p5w8"><option></option><option>??/option><option>瑜?/option><option>?섍퀬</option></select></label>
+<label class="block mb-2">9. 鍮?__ ?곗쑀瑜??ъ슂. <select class="border rounded p-2" id="p5w9"><option></option><option>??/option><option>?섍퀬</option><option>瑜?/option></select></label>
+<label class="block mb-2">10. ?쁗here are you going???= <select class="border rounded p-2" id="p5w10"><option></option><option>?대뵒??媛??</option><option>臾댁뾿??癒뱀뼱??</option><option>?꾧? ???</option></select></label></div>
+<div class="border rounded-xl p-4"><h3 class="font-bold mb-2">C. 臾몄옣 留뚮뱾湲?/h3>
+<label class="block mb-2">11. 怨듭썝 / 媛????<input class="border rounded p-2 w-full" id="p5w11" placeholder="臾몄옣???곗꽭??/></label>
+<label class="block mb-2">12. ?쇰㈃ / 源諛?/ 癒밸떎 ??<input class="border rounded p-2 w-full" id="p5w12" placeholder="臾몄옣???곗꽭??/></label>
+<label class="block mb-2">13. 移댄럹 / 媛????<input class="border rounded p-2 w-full" id="p5w13" placeholder="臾몄옣???곗꽭??/></label>
+<label class="block mb-2">14. ?ш낵 / ?щ룄 / ?щ떎 ??<input class="border rounded p-2 w-full" id="p5w14" placeholder="臾몄옣???곗꽭??/></label>
+<label class="block mb-2">15. 臾댁뾿??癒뱀뼱?? ??<input class="border rounded p-2 w-full" id="p5w15" placeholder="??듭쓣 ?곗꽭??/></label></div>
+</div><button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-xl" onclick="checkP5W()">媛앷????곗뒿 ?뺤씤</button><div class="mt-3 hidden" id="p5wResult"></div>
 </section>
 
-<footer class="text-center text-sm text-slate-500 py-6">Bukhara King Sejong Institute · 세종한국어 1A · 1~4과</footer>
+<section class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7" id="lesson9">
+<h2 class="text-xl font-bold mb-1">5怨? 媛쒕퀎 ?⑥썝?됯?</h2><p class="text-blue-600 mb-5">?댄쐶쨌臾몃쾿 10臾명빆 / 100??/p>
+<div class="space-y-4">
+<label class="block">1. ?쁯ark?숈쓽 ?쒓뎅?대뒗? <select class="border rounded p-2" id="t5_1"><option></option><option value="怨듭썝">怨듭썝</option><option>?뚯궗</option><option>留덊듃</option></select></label>
+<label class="block">2. ????숆탳___ 媛?? <select class="border rounded p-2" id="t5_2"><option></option><option value="??>??/option><option>瑜?/option><option>?섍퀬</option></select></label>
+<label class="block">3. 鍮?__ ?곗쑀瑜??ъ슂. <select class="border rounded p-2" id="t5_3"><option></option><option>??/option><option value="?섍퀬">?섍퀬</option><option>瑜?/option></select></label>
+<label class="block">4. ?쁲nack?숈쓽 ?쒓뎅?대뒗? <select class="border rounded p-2" id="t5_4"><option></option><option>怨쇱씪</option><option value="怨쇱옄">怨쇱옄</option><option>李?/option></select></label>
+<label class="block">5. 留덈━ ?⑤뒗 諛깊솕??__ 媛?? <select class="border rounded p-2" id="t5_5"><option></option><option value="??>??/option><option>瑜?/option><option>?섍퀬</option></select></label>
+<label class="block">6. ?쇰㈃___ 源諛μ쓣 癒뱀뼱?? <select class="border rounded p-2" id="t5_6"><option></option><option>??/option><option value="?섍퀬">?섍퀬</option><option>瑜?/option></select></label>
+<label class="block">7. ?쁟afe?숈쓽 ?쒓뎅?대뒗? <select class="border rounded p-2" id="t5_7"><option></option><option value="移댄럹">移댄럹</option><option>怨듭썝</option><option>?앸떦</option></select></label>
+<label class="block">8. ???怨듭썝___ 媛?? <select class="border rounded p-2" id="t5_8"><option></option><option value="??>??/option><option>瑜?/option><option>?섍퀬</option></select></label>
+<label class="block">9. ?쁗hat do you eat???<select class="border rounded p-2" id="t5_9"><option></option><option>?대뵒??媛??</option><option value="臾댁뾿??癒뱀뼱??">臾댁뾿??癒뱀뼱??</option><option>?꾧뎄?덉슂?</option></select></label>
+<label class="block">10. ?먯뿰?ㅻ윭??臾몄옣?? <select class="border rounded p-2" id="t5_10"><option></option><option value="?ш낵?섍퀬 ?щ룄瑜?癒뱀뼱??">?ш낵?섍퀬 ?щ룄瑜?癒뱀뼱??</option><option>?ш낵???щ룄瑜?癒뱀뼱??</option><option>?ш낵瑜?媛??</option></select></label>
+</div><button class="mt-4 w-full bg-blue-600 text-white font-bold py-3 rounded-xl" onclick="grade5new()">5怨?梨꾩젏?섍린</button><div class="mt-3 hidden" id="t5Result"></div></section>
+<section class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7" id="lesson10">
+<h2 class="text-xl font-bold mb-1">6怨? ?숈뒿 諛??곗뒿</h2><p class="text-amber-600 mb-5">?댄쐶: 怨좎쑀???샕룸떒??紐낆궗 / 臾몃쾿: -(???몄슂</p>
+<div class="grid gap-3 md:grid-cols-2"><div class="border rounded-xl p-4"><b>怨좎쑀????/b><br/>?섎굹, ?? ?? ?? ?ㅼ꽢, ?ъ꽢, ?쇨낢, ?щ뜜, ?꾪솄, ?? ?댄븯?? ?ㅻТ</div><div class="border rounded-xl p-4"><b>?⑥쐞 紐낆궗</b><br/>媛? 紐? 留덈━, ?? 蹂? 沅? ?? ??/div><div class="border rounded-xl p-4"><b>?붿껌 ?쒗쁽</b><br/>?됱쑝?몄슂. 쨌 ?곗꽭?? 쨌 ??듯븯?몄슂. 쨌 ?댁꽭?? 쨌 ?ㅼ꽭?? 쨌 ??몄슂.</div><div class="border rounded-xl p-4"><b>?덈Ц</b><br/>?쇰㈃ ??媛?二쇱꽭??<br/>而ㅽ뵾 ????二쇱꽭??<br/>?댁씪 ?쇱컢 ?ㅼ꽭??</div></div><div class="mt-8 pt-6 border-t-2 border-dashed border-slate-300"><h3 class="text-xl font-bold mb-4">6怨? ?숈뒿 諛??곗뒿 - 媛뺥솕 ?곗뒿</h3></div><p class="text-amber-600 mb-5">?샕룸떒??紐낆궗쨌-(???몄슂 媛뺥솕 ?곗뒿</p>
+<div class="space-y-4"><div class="border rounded-xl p-4"><h3 class="font-bold mb-2">A. 怨좎쑀????/h3>
+<label class="block mb-2">1. 1 = <select class="border rounded p-2" id="p6w1"><option></option><option value="?섎굹">?섎굹</option><option>??/option><option>??/option></select></label><label class="block mb-2">2. 4 = <select class="border rounded p-2" id="p6w2"><option></option><option>??/option><option value="??>??/option><option>?ㅼ꽢</option></select></label><label class="block mb-2">3. 6 = <select class="border rounded p-2" id="p6w3"><option></option><option>?ㅼ꽢</option><option value="?ъ꽢">?ъ꽢</option><option>?쇨낢</option></select></label><label class="block mb-2">4. 10 = <select class="border rounded p-2" id="p6w4"><option></option><option>?꾪솄</option><option value="??>??/option><option>?ㅻТ</option></select></label><label class="block mb-2">5. 20 = <select class="border rounded p-2" id="p6w5"><option></option><option>??/option><option value="?ㅻТ">?ㅻТ</option><option>?댄븯??/option></select></label></div>
+<div class="border rounded-xl p-4"><h3 class="font-bold mb-2">B. ?⑥쐞 紐낆궗</h3><label class="block mb-2">6. ?ш낵 ??___ <select class="border rounded p-2" id="p6w6"><option></option><option value="媛?>媛?/option><option>紐?/option><option>留덈━</option></select></label><label class="block mb-2">7. ?숈깮 ??___ <select class="border rounded p-2" id="p6w7"><option></option><option>媛?/option><option value="紐?>紐?/option><option>??/option></select></label><label class="block mb-2">8. 怨좎뼇????___ <select class="border rounded p-2" id="p6w8"><option></option><option>沅?/option><option value="留덈━">留덈━</option><option>??/option></select></label><label class="block mb-2">9. 而ㅽ뵾 ??___ <select class="border rounded p-2" id="p6w9"><option></option><option value="??>??/option><option>蹂?/option><option>紐?/option></select></label><label class="block mb-2">10. 梨???___ <select class="border rounded p-2" id="p6w10"><option></option><option value="沅?>沅?/option><option>??/option><option>蹂?/option></select></label></div>
+<div class="border rounded-xl p-4"><h3 class="font-bold mb-2">C. -(???몄슂</h3><label class="block mb-2">11. ?됰떎 ??<select class="border rounded p-2" id="p6w11"><option></option><option value="?됱쑝?몄슂.">?됱쑝?몄슂.</option><option>?됱꽭??</option><option>?됱븘??</option></select></label><label class="block mb-2">12. ?ㅻ떎 ??<select class="border rounded p-2" id="p6w12"><option></option><option value="?ㅼ꽭??">?ㅼ꽭??</option><option>?ㅼ쑝?몄슂.</option><option>???</option></select></label><label class="block mb-2">13. ?????<select class="border rounded p-2" id="p6w13"><option></option><option value="??몄슂.">??몄슂.</option><option>??쇱꽭??</option><option>???</option></select></label><label class="block mb-2">14. ?곕떎 ??<select class="border rounded p-2" id="p6w14"><option></option><option value="?곗꽭??">?곗꽭??</option><option>?곗쑝?몄슂.</option><option>?⑥슂.</option></select></label><label class="block mb-2">15. ?쁏lease open it.??= <select class="border rounded p-2" id="p6w15"><option></option><option value="?댁꽭??">?댁꽭??</option><option>?댁슂.</option><option>?댁쑝?몄슂.</option></select></label></div></div><button class="mt-4 bg-amber-600 text-white px-4 py-2 rounded-xl" onclick="checkP6W()">?곗뒿 ?뺤씤</button><div class="mt-3 hidden" id="p6wResult"></div></section>
+
+<section class="lesson bg-white rounded-2xl shadow-sm p-5 md:p-7" id="lesson12"><h2 class="text-xl font-bold mb-1">6怨? 媛쒕퀎 ?⑥썝?됯?</h2><p class="text-amber-600 mb-5">?댄쐶쨌?샕룸떒??紐낆궗쨌?붿껌 ?쒗쁽 10臾명빆 / 100??/p><div class="space-y-4">
+<label class="block">1. 1??怨좎쑀???섎뒗? <select class="border rounded p-2" id="t6_1"><option></option><option value="?섎굹">?섎굹</option><option>??/option><option>??/option></select></label><label class="block">2. 7??怨좎쑀???섎뒗? <select class="border rounded p-2" id="t6_2"><option></option><option>?ъ꽢</option><option value="?쇨낢">?쇨낢</option><option>?щ뜜</option></select></label><label class="block">3. ?щ엺 ?섏뿉 ?곕뒗 ?⑥쐞?? <select class="border rounded p-2" id="t6_3"><option></option><option value="紐?>紐?/option><option>留덈━</option><option>??/option></select></label><label class="block">4. ?숇Ъ ?섏뿉 ?곕뒗 ?⑥쐞?? <select class="border rounded p-2" id="t6_4"><option></option><option>沅?/option><option value="留덈━">留덈━</option><option>??/option></select></label><label class="block">5. 而ㅽ뵾 ??___ 二쇱꽭?? <select class="border rounded p-2" id="t6_5"><option></option><option value="??>??/option><option>媛?/option><option>紐?/option></select></label><label class="block">6. 梨???___ ?덉뼱?? <select class="border rounded p-2" id="t6_6"><option></option><option value="沅?>沅?/option><option>??/option><option>蹂?/option></select></label><label class="block">7. ?됰떎 + -(???몄슂 <select class="border rounded p-2" id="t6_7"><option></option><option value="?됱쑝?몄슂.">?됱쑝?몄슂.</option><option>?됱꽭??</option><option>?됱븘??</option></select></label><label class="block">8. ?ㅻ떎 + -(???몄슂 <select class="border rounded p-2" id="t6_8"><option></option><option value="?ㅼ꽭??">?ㅼ꽭??</option><option>?ㅼ쑝?몄슂.</option><option>???</option></select></label><label class="block">9. ?쇰㈃ ___ 媛?二쇱꽭?? (3) <select class="border rounded p-2" id="t6_9"><option></option><option value="??>??/option><option>??/option><option>??/option></select></label><label class="block">10. 踰꾩뒪瑜?___. (??? <select class="border rounded p-2" id="t6_10"><option></option><option value="??몄슂.">??몄슂.</option><option>??쇱꽭??</option><option>???</option></select></label></div><button class="mt-4 w-full bg-amber-600 text-white font-bold py-3 rounded-xl" onclick="grade6new()">6怨?梨꾩젏?섍린</button><div class="mt-3 hidden" id="t6Result"></div></section>
+<footer class="text-center text-sm text-slate-500 py-6">Bukhara King Sejong Institute 쨌 ?몄쥌?쒓뎅??1A 쨌 1~6怨?/footer>
 </div>
 <script>
 function showLesson(n){
  document.querySelectorAll('.lesson').forEach(x=>x.classList.remove('active'));
  document.getElementById('lesson'+n).classList.add('active');
  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('tab-active'));
- const map={1:0,2:1,3:2,5:3,4:4,6:5};
+ const map={1:0,2:1,3:2,5:3,4:4,6:5,7:6,9:7,10:8,12:9};
  document.querySelectorAll('.tab')[map[n]].classList.add('tab-active');
  window.scrollTo({top:0,behavior:'smooth'});
 }
 function checkGrammar(){
- const answers={g1:'공부해요',g2:'먹어요',g3:'봐요',g4:'들어요',g5:'를',g6:'를',g7:'를'};
+ const answers={g1:'怨듬??댁슂',g2:'癒뱀뼱??,g3:'遊먯슂',g4:'?ㅼ뼱??,g5:'瑜?,g6:'瑜?,g7:'瑜?};
  let score=0;
  Object.keys(answers).forEach(id=>{const el=document.getElementById(id); if(el && el.value.trim()===answers[id]) score++;});
  const result=document.getElementById('grammarResult');
  result.classList.remove('hidden');
- result.innerHTML='<b>문법 연습 결과: '+score+' / 7</b><p class="mt-1">틀린 답은 핵심 설명을 다시 확인해 보세요.</p>';
+ result.innerHTML='<b>臾몃쾿 ?곗뒿 寃곌낵: '+score+' / 7</b><p class="mt-1">?由??듭? ?듭떖 ?ㅻ챸???ㅼ떆 ?뺤씤??蹂댁꽭??</p>';
 }
 function grade(){
- const answers=['의사','선생님','요리사','팔','십오','삼','위','안','이에요','아니에요'];
+ const answers=['?섏궗','?좎깮??,'?붾━??,'??,'??삤','??,'??,'??,'?댁뿉??,'?꾨땲?먯슂'];
  let score=0;
  answers.forEach((a,i)=>{const el=document.getElementById('q'+(i+1));if(el && el.value.trim()===a)score+=10;});
- const name=document.getElementById('studentName').value.trim()||'학생';
+ const name=document.getElementById('studentName').value.trim()||'?숈깮';
  const result=document.getElementById('result');
  result.classList.remove('hidden');
- result.innerHTML='<h3 class="text-xl font-bold mb-2">'+name+'님의 결과</h3><p class="text-3xl font-bold text-indigo-700">'+score+' / 100점</p><p class="mt-2">'+(score===100?'축하합니다! 모든 문제를 맞혔어요.':'틀린 문제를 다시 공부해 보세요.')+'</p>';
+ result.innerHTML='<h3 class="text-xl font-bold mb-2">'+name+'?섏쓽 寃곌낵</h3><p class="text-3xl font-bold text-indigo-700">'+score+' / 100??/p><p class="mt-2">'+(score===100?'異뺥븯?⑸땲?? 紐⑤뱺 臾몄젣瑜?留욏삍?댁슂.':'?由?臾몄젣瑜??ㅼ떆 怨듬???蹂댁꽭??')+'</p>';
  result.scrollIntoView({behavior:'smooth'});
 }
 function gradeLesson4(){
- const answers={l4q1:'먹어요',l4q2:'읽어요',l4q3:'봐요',l4q4:'들어요',l4q5:'를',l4q6:'을',l4q7:'를',l4q8:'를',l4q9:'공부해요',l4q10:'운동해요'};
+ const answers={l4q1:'癒뱀뼱??,l4q2:'?쎌뼱??,l4q3:'遊먯슂',l4q4:'?ㅼ뼱??,l4q5:'瑜?,l4q6:'??,l4q7:'瑜?,l4q8:'瑜?,l4q9:'怨듬??댁슂',l4q10:'?대룞?댁슂'};
  let score=0; Object.keys(answers).forEach(id=>{if(document.getElementById(id).value===answers[id])score++;});
- const r=document.getElementById('lesson4Result'); r.classList.remove('hidden'); r.innerHTML='<b>점수: '+(score*10)+'점 / 100점</b><br>맞힌 문항: '+score+' / 10';
+ const r=document.getElementById('lesson4Result'); r.classList.remove('hidden'); r.innerHTML='<b>?먯닔: '+(score*10)+'??/ 100??/b><br>留욏엺 臾명빆: '+score+' / 10';
 }
 
+
+function checkP5W(){const a=['怨듭썝','留덊듃','怨쇱옄','?앸떦','而ㅽ뵾','??,'?섍퀬','??,'?섍퀬','?대뵒??媛??'];let s=0;a.forEach((v,i)=>{if(document.getElementById('p5w'+(i+1)).value===v)s++;});const r=document.getElementById('p5wResult');r.classList.remove('hidden');r.innerHTML='<b>5怨?媛앷????곗뒿: '+s+' / 10</b><p>?곌린 臾명빆 11~15踰덉? ?좎깮?섏씠 ?뺤씤??二쇱꽭??</p>';}
+function grade5new(){const a=['怨듭썝','??,'?섍퀬','怨쇱옄','??,'?섍퀬','移댄럹','??,'臾댁뾿??癒뱀뼱??','?ш낵?섍퀬 ?щ룄瑜?癒뱀뼱??'];let s=0;a.forEach((v,i)=>{if(document.getElementById('t5_'+(i+1)).value===v)s++;});const r=document.getElementById('t5Result');r.classList.remove('hidden');r.innerHTML='<b>5怨??먯닔: '+(s*10)+'??/ 100??/b><br>留욏엺 臾명빆: '+s+' / 10';}
+function checkP6W(){const a=['?섎굹','??,'?ъ꽢','??,'?ㅻТ','媛?,'紐?,'留덈━','??,'沅?,'?됱쑝?몄슂.','?ㅼ꽭??','??몄슂.','?곗꽭??','?댁꽭??'];let s=0;a.forEach((v,i)=>{if(document.getElementById('p6w'+(i+1)).value===v)s++;});const r=document.getElementById('p6wResult');r.classList.remove('hidden');r.innerHTML='<b>6怨??곗뒿 寃곌낵: '+s+' / 15</b>'}
+function grade6new(){const a=['?섎굹','?쇨낢','紐?,'留덈━','??,'沅?,'?됱쑝?몄슂.','?ㅼ꽭??','??,'??몄슂.'];let s=0;a.forEach((v,i)=>{if(document.getElementById('t6_'+(i+1)).value===v)s++;});const r=document.getElementById('t6Result');r.classList.remove('hidden');r.innerHTML='<b>6怨??먯닔: '+(s*10)+'??/ 100??/b><br>留욏엺 臾명빆: '+s+' / 10';}
 </script>
 </body>
 </html>
